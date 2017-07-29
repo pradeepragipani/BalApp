@@ -1,0 +1,13 @@
+page-home {
+  .toolbar-background {
+    background-color: #4b7ff5;
+  }
+
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    background-color: #dcd6d6;
+    opacity: 0.4;
+  }
+}

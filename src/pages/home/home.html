@@ -1,0 +1,139 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <h5 style="text-align: center; color: #fff;">Bal App</h5>
+      </ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-2>
+        <ion-icon ios="ios-person" md="md-person" style="color: #fff; font-size: 25px; padding: 10px 0 0 12px;"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+
+  <!-- <ion-toolbar>
+    <ion-title>Subheader</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-searchbar type="search" placeholder="Search" [showCancelButton]="shouldShowCancel" [(ngModel)]="search"></ion-searchbar>
+  </ion-item>
+
+  <!-- <button ion-button full>Search</button> -->
+
+  <ion-slides pager="true" style="height: 40%; padding-top: 15px;">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.MediaUrl">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-row style="background-color: #f5f5f5;">
+    <ion-col>
+      <h5 style="text-align: center;">Shop By Category</h5>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+
+    <ion-col  col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content align="center">
+          <img src="assets/img/item1.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 1</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col align="center" col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content>
+          <img src="assets/img/item2.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 2</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col align="center" col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content>
+          <img src="assets/img/item3.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 3</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row>
+
+    <ion-col  col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content align="center">
+          <img src="assets/img/item4.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 4</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col align="center" col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content>
+          <img src="assets/img/item5.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 5</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col align="center" col-4>
+      <ion-card (click)="gotoListItemsPage()">
+        <ion-card-content>
+          <img src="assets/img/item6.png" style="width:30px; height: 30px; display:inline-block;"/>
+          <p style="font-size:10px;white-space: nowrap;">Item 6</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  
+  <div style="touch-action: manipulation;">
+    <h5 style="text-align: center; color: #fd2626;" [hidden]="hideCol" (click)="showCol('show')">View More</h5>
+  </div>
+
+  <ion-row [hidden]="!hideCol">
+
+      <ion-col  col-4>
+        <ion-card (click)="gotoListItemsPage()">
+          <ion-card-content align="center">
+            <img src="assets/img/item7.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+            <p style="font-size:10px;white-space: nowrap;">Item 7</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col align="center" col-4>
+        <ion-card (click)="gotoListItemsPage()">
+          <ion-card-content>
+            <img src="assets/img/item8.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+            <p style="font-size:10px;white-space: nowrap;">Item 8</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col align="center" col-4>
+        <ion-card (click)="gotoListItemsPage()">
+          <ion-card-content>
+            <img src="assets/img/item9.jpg" style="width:30px; height: 30px; display:inline-block;"/>
+            <p style="font-size:10px;white-space: nowrap;">Item 9</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+  </ion-row>
+
+  <div style="touch-action: manipulation;">
+    <h5 style="text-align: center; color: #fd2626;" [hidden]="!hideCol" (click)="showCol('hide')">View Less</h5>
+  </div>
+
+</ion-content>
